@@ -8,7 +8,7 @@ namespace PPA1
     {
         public string BMI(double heightFeet, double heightInches, double weight)
         {
-            if(heightFeet <= 0 || heightInches <= 0 || weight <= 0)
+            if((heightFeet <= 0 && heightInches <= 0) || weight <= 0)
             {
                 return "Impossible";
             } 
@@ -38,16 +38,20 @@ namespace PPA1
 
         public string Retire(int age, double salary, double percentage, double goal)
         {
+            if(age < 0 || salary <= 0 || percentage <= 0 || goal < 0)
+            {
+                return "Impossible";
+            }
             double yearlySavings = (salary * (percentage / 100) * 1.35);
             int numberOfYears = (int)Math.Ceiling(goal / yearlySavings);
             int goalAge = age + numberOfYears;
             if(goalAge >= 100)
             {
-                return "You died";
+                return goalAge.ToString() + " years old" + ", you died!";
             }
             else
             {
-                return goalAge.ToString() + " years";
+                return goalAge.ToString() + " years old";
             }
         }
     }

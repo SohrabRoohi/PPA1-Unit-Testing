@@ -4,6 +4,7 @@ namespace PPA1
 {
     public class Program
     {
+        static Functions f = new Functions();
         static void Main(string[] args)
         {
             Menu();
@@ -11,11 +12,10 @@ namespace PPA1
 
         static void Menu()
         {
-            Functions f = new Functions();
             while(true)
             {
-                Console.WriteLine("1. ");
-                Console.WriteLine("2. ");
+                Console.WriteLine("1. BMI");
+                Console.WriteLine("2. Retirement");
                 Console.WriteLine("3. ");
                 Console.WriteLine("4. ");
                 Console.Write("Select a function (1-4) or 5 to exit: ");
