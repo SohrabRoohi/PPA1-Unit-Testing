@@ -27,6 +27,12 @@ namespace PPA1Tests
             Assert.AreEqual("100 years old, you died!", f.Retire(92, 100000, 10, 100000));
         }
 
-
+        [TestMethod]
+        public void DistanceTest()
+        {
+            Assert.AreEqual(1.00, f.Distance(1, 0, 2, 0));
+            Assert.AreEqual(103.08, f.Distance(100, 5, 200, -20));
+            Assert.AreEqual(999051054.75, f.Distance(1e9, -1e5, 1e6, 1e7));
+        }
     }
 }

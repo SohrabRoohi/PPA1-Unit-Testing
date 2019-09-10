@@ -16,8 +16,8 @@ namespace PPA1
             {
                 Console.WriteLine("1. BMI");
                 Console.WriteLine("2. Retirement");
-                Console.WriteLine("3. ");
-                Console.WriteLine("4. ");
+                Console.WriteLine("3. Distance");
+                Console.WriteLine("4. Split the Tip");
                 Console.Write("Select a function (1-4) or 5 to exit: ");
                 string numString = Console.ReadLine();
                 int num;
