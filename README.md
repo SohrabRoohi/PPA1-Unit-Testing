@@ -26,7 +26,7 @@ Following C# conventions classes and functions are named in PascalCase. The unit
 
 The tests will use multiple assert statements to test the different cases of the specified functions. Invalid input (such as negative numbers) will be given and appropriate output should also match that.
 
-#Setup
+# Setup
 
 This application has been developed for Windows 10, it may also work on Linux but I have not tested it.
 
