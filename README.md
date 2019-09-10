@@ -72,3 +72,11 @@ With the project open, go to Extensions->ReSharper->Unit Tests->Unit Tests. In t
 
 # Tests Passing
 
+![alt text](https://raw.githubusercontent.com/SohrabRoohi/PPA1-Unit-Testing/master/Screenshots/PPA1TestExplorer.png "Test Explorer")  
+The green check mark indicates the tests passed in the duration given.
+
+# Code Coverage
+![alt text](https://raw.githubusercontent.com/SohrabRoohi/PPA1-Unit-Testing/master/Screenshots/PPA1Coverage.png "Coverage Explorer")  
+The methods in Functions.cs have 100% code coverage, Program.cs does not count because that contains all of the CLI code.
+
+# Retrospective
