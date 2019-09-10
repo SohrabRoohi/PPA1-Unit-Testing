@@ -1,7 +1,7 @@
 # PPA1-Unit-Testing
 # Organization
 The assignment was completed in C# .NET Core for which Microsoft Visual Studio 2019 was utilized to create the functions and MSUnit tests. 
-##### Project Structure
+### Project Structure
 ```
 Solution  
 │   README.md
@@ -19,10 +19,10 @@ Functions.cs - Contains the four functions that were described in the assignment
 
 UnitTest1.cs - Contains the four unit testing functions that test the functions implemented in Functions.cs. Uses Assert statements to analyze output of the functions.
 
-##### Naming
+### Naming
 Following C# conventions classes and functions are named in PascalCase. The unit tests are are also named in PascalCase and have a word in them to identify which function it is testing (e.g. BMITest() or RetireTest()).
 
-##### Test Functionality
+### Test Functionality
 
 The tests will use multiple assert statements to test the different cases of the specified functions. Invalid input (such as negative numbers) will be given and appropriate output should also match that.
 
@@ -31,11 +31,11 @@ The tests will use multiple assert statements to test the different cases of the
 This application has been developed for Windows 10, it may also work on Linux but I have not tested it.
 
 
-##### Windows Executable
+### Windows Executable
 
 To run the application without the tests I have created an stand-alonre Windows executable. A shortcut to the executable is in the root folder of the repo named "PPA1.exe (Run this to test)". Double click this to run the application in a Windows command prompt.
 
-#####  Visual Studio
+###  Visual Studio
 
 To setup and run the tests/applications you will need Microsoft Visual Studio.
 
@@ -59,7 +59,7 @@ To run the application hit the Green Play button at the top that has PPA1 next t
 
 To run the tests go to Test->Windows->Test Explorer and once the Test Explorer pops up hit the Green Play button that in that window. This should run all the tests and show the results.
 
-##### Code Coverage
+### Code Coverage
 To see the Code Coverage for the project I have used dotCover by JetBrains, you can download it for free with a @ufl.edu email address.
 
 [dotCover Download](https://www.jetbrains.com/dotcover/)
