@@ -29,11 +29,10 @@ namespace PPA1
             {
                 return ans.ToString() + " Overweight";
             }
-            else if(ans >= 30)
+            else
             {
                 return ans.ToString() + " Obese";
             }
-            return "Impossible";
         }
 
         public string Retire(int age, double salary, double percentage, double goal)
@@ -60,6 +59,19 @@ namespace PPA1
             return Math.Round(Math.Sqrt(Math.Pow(x1 - x2, 2) + Math.Pow(y1 - y2, 2)), 2);
         }
 
-
+        public List<double> Split(double amount, int number)
+        {
+            List<double> ans = new List<double>();
+            if (amount < 0 || number <= 0) return ans;
+            amount *= 100;
+            int val = (int)(amount / number);
+            double amountD = (double)val / 100;
+            int remainder = (int)amount % number;
+            for(int i = 0; i < number; i++)
+            {
+                ans.Add(amountD + (i + 1 <= remainder ? .01 : 0));
+            }
+            return ans;
+        }
     }
 }
