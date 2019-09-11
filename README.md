@@ -72,3 +72,14 @@ With the project open, go to Extensions->ReSharper->Unit Tests->Unit Tests. In t
 
 # Tests Passing
 
+![alt text](https://raw.githubusercontent.com/SohrabRoohi/PPA1-Unit-Testing/master/Screenshots/PPA1TestExplorer.png "Test Explorer")  
+The green check mark indicates the tests passed in the duration given.
+
+# Code Coverage
+![alt text](https://raw.githubusercontent.com/SohrabRoohi/PPA1-Unit-Testing/master/Screenshots/PPA1Coverage.png "Coverage Explorer")  
+The methods in Functions.cs have 100% code coverage, Program.cs does not count because that contains all of the CLI code.
+
+# Retrospective
+Author: Sohrab Roohi
+
+My experience with unit testing and test driven development was very insightful. I gained some more experience writing unit tests and it was my first time going with the "write the test first" approach. I think unit testing is a very important aspect to software development as it helps catch bugs from future changes. The idea of TDD is also very important because it makes you think of edge cases and expected values before the fact which helps you design your functions. It would definitely be useful for a real project especially when it is important that there be no mistakes in the code. However, on the other hand the only drawback I had when using TDD was that I had to think of the expected values of some of these functions before hand. Some of the functions had a lot of calculations and it was a little annoying to do it by hand to make sure it was correct. Other than that, I think unit testing and TDD are a very important aspect of software development.
