@@ -13,11 +13,11 @@ Solution
 ```
 Based on the project structure I have created two seperate projects in Visual Studio, one to hold the CLI and functions and another to hold the tests.
 
-Program.cs - Contains all the CLI code, input/output, and calls the functions desired by the specifications. (This code was not expected to have code coverage as specified)
+[Program.cs](https://github.com/SohrabRoohi/PPA1-Unit-Testing/blob/master/PPA1/Program.cs) - Contains all the CLI code, input/output, and calls the functions desired by the specifications. (This code was not expected to have code coverage as specified)
 
-Functions.cs - Contains the four functions that were described in the assignment specifications. BMI, Retire, Distance, and Split.
+[Functions.cs](https://github.com/SohrabRoohi/PPA1-Unit-Testing/blob/master/PPA1/Functions.cs) - Contains the four functions that were described in the assignment specifications. BMI, Retire, Distance, and Split.
 
-UnitTest1.cs - Contains the four unit testing functions that test the functions implemented in Functions.cs. Uses Assert statements to analyze output of the functions.
+[UnitTest1.cs](https://github.com/SohrabRoohi/PPA1-Unit-Testing/blob/master/PPA1Tests/UnitTest1.cs) - Contains the four unit testing functions that test the functions implemented in Functions.cs. Uses Assert statements to analyze output of the functions.
 
 ### Naming
 Following C# conventions classes and functions are named in PascalCase. The unit tests are are also named in PascalCase and have a word in them to identify which function it is testing (e.g. BMITest() or RetireTest()).
@@ -83,3 +83,6 @@ The methods in Functions.cs have 100% code coverage, Program.cs does not count b
 Author: Sohrab Roohi
 
 My experience with unit testing and test driven development was very insightful. I gained some more experience writing unit tests and it was my first time going with the "write the test first" approach. I think unit testing is a very important aspect to software development as it helps catch bugs from future changes. The idea of TDD is also very important because it makes you think of edge cases and expected values before the fact which helps you design your functions. It would definitely be useful for a real project especially when it is important that there be no mistakes in the code. However, on the other hand the only drawback I had when using TDD was that I had to think of the expected values of some of these functions before hand. Some of the functions had a lot of calculations and it was a little annoying to do it by hand to make sure it was correct. Other than that, I think unit testing and TDD are a very important aspect of software development.
+
+# Screencasts
+You can find the screencasts in the in the [Screencasts](https://github.com/SohrabRoohi/PPA1-Unit-Testing/tree/master/Screencasts) folder (RootFolder/Screencasts).
