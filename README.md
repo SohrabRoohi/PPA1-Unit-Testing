@@ -33,7 +33,7 @@ This application has been developed for Windows 10, it may also work on Linux bu
 
 ### Windows Executable
 
-To run the application without the tests I have created an stand-alonre Windows executable. A shortcut to the executable is in the root folder of the repo named "PPA1.exe (Run this to test)". Double click this to run the application in a Windows command prompt.
+To run the application without the tests I have created an stand-alone Windows executable. A shortcut to the executable is in the root folder of the repo named "PPA1.exe (Run this to test)". Double click this to run the application in a Windows command prompt.
 
 ###  Visual Studio
 
