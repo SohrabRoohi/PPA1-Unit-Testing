@@ -26,6 +26,20 @@ Following C# conventions classes and functions are named in PascalCase. The unit
 
 The tests will use multiple assert statements to test the different cases of the specified functions. Invalid input (such as negative numbers) will be given and appropriate output should also match that.
 
+### Functions
+[public string BMI(double heightFeet, double heightInches, double weight)](https://github.com/SohrabRoohi/PPA1-Unit-Testing/blob/6c77b9333054a50f35092b9d86f9d2a4431bc591/PPA1/Functions.cs#L9)  
+Takes parameters indicated and will return a string in the format "BMIValue weightType" where BMIValue is a double rounded to two decimal places. If parameters given are invalid it will instead return "Impossible".
+
+[public string Retire(int age, double salary, double percentage, double goal)](https://github.com/SohrabRoohi/PPA1-Unit-Testing/blob/6c77b9333054a50f35092b9d86f9d2a4431bc591/PPA1/Functions.cs#L38)  
+Takes paramters indicated and returns a string based on age, if age is < 100 returns "age years old". If age >= 100 returns "age years old, you died!" If parameters given are invalid it will instead return "Impossible".
+
+[public double Distance(double x1, double y1, double x2, double y2)](https://github.com/SohrabRoohi/PPA1-Unit-Testing/blob/6c77b9333054a50f35092b9d86f9d2a4431bc591/PPA1/Functions.cs#L57)  
+Takes parameters indicated and returns the distance between (x1, 1) and (x2,y2) as a double rounded the two decimal places.
+
+[public List<double> Split(double amount, int number)](https://github.com/SohrabRoohi/PPA1-Unit-Testing/blob/6c77b9333054a50f35092b9d86f9d2a4431bc591/PPA1/Functions.cs#L62)  
+Takes paramters indicated and creates a List of double **L** of size **number** (parameter) which where the L[i] indicates how much the **i**th person in the group should pay. If the amount cannot be split equally the remainder **R** is equally distributed between the first **R** people. If parameters given are invalid it will return an empty List.
+
+
 # Setup
 
 This application has been developed for Windows 10, it may also work on Linux but I have not tested it.
@@ -33,7 +47,7 @@ This application has been developed for Windows 10, it may also work on Linux bu
 
 ### Windows Executable
 
-To run the application without the tests I have created an stand-alone Windows executable. A shortcut to the executable is in the root folder of the repo named "PPA1.exe (Run this to test)". Double click this to run the application in a Windows command prompt.
+To run the application without the tests I have created an stand-alonre Windows executable. A shortcut to the executable is in the root folder of the repo named "PPA1.exe (Run this to test)". Double click this to run the application in a Windows command prompt.
 
 ###  Visual Studio
 
