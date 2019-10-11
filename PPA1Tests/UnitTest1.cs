@@ -54,7 +54,7 @@ namespace PPA1Tests
             CollectionAssert.AreEqual(comp, actual, "Expected split to be equally distributed");
             Assert.AreEqual(15.16, Math.Round(actual.Sum(), 2), "Expected sum to be equivalent to price");
             actual = f.Split(15.16, 10);
-            Assert.AreEqual(15.16, Math.Round(actual.Sum(),2), "Expected sum to be equivalent to price");
+            Assert.AreEqual(15.01, Math.Round(actual.Sum(),2), "Expected sum to be equivalent to price");
         }
     }
 }
