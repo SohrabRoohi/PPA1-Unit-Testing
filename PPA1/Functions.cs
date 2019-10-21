@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Model;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -6,11 +7,13 @@ namespace PPA1
 {
     public class Functions
     {
-        public string BMI(double heightFeet, double heightInches, double weight)
+        public string BMI(double heightFeet, double heightInches, double weight, LogContext db)
         {
-            if((heightFeet <= 0 && heightInches <= 0) || weight <= 0)
+            BMILog log = new BMILog(DateTime.Now, heightFeet, heightInches, weight, "");
+            if (heightFeet < 0 || heightInches < 0 || weight <= 0 || (heightFeet == 0 && heightInches == 0))
             {
-                return "Impossible";
+                log.result = "Impossible";
+                goto skip;
             } 
             weight *= .45;
             heightInches += 12 * heightFeet;
@@ -18,21 +21,27 @@ namespace PPA1
             heightInches *= heightInches;
             double ans = weight / heightInches;
             ans = Math.Round(ans, 2);
+            string result;
             if(ans < 18.5) {
-                return ans.ToString() + " Underweight";
+                result = ans.ToString() + " Underweight";
             }
             else if(ans >= 18.5 && ans < 25)
             {
-                return ans.ToString() + " Normal weight";
+                result = ans.ToString() + " Normal weight";
             }
             else if(ans >= 25 && ans < 30)
             {
-                return ans.ToString() + " Overweight";
+                result = ans.ToString() + " Overweight";
             }
             else
             {
-                return ans.ToString() + " Obese";
+                result = ans.ToString() + " Obese";
             }
+            log.result = result;
+            skip:
+            db.BMILogs.Add(log);
+            db.SaveChanges();
+            return log.result;
         }
 
         public string Retire(int age, double salary, double percentage, double goal)
@@ -54,9 +63,13 @@ namespace PPA1
             }
         }
 
-        public double Distance(double x1, double y1, double x2, double y2)
+        public double Distance(double x1, double y1, double x2, double y2, LogContext db)
         {
-            return Math.Round(Math.Sqrt(Math.Pow(x1 - x2, 2) + Math.Pow(y1 - y2, 2)), 2);
+            double result = Math.Round(Math.Sqrt(Math.Pow(x1 - x2, 2) + Math.Pow(y1 - y2, 2)), 2);
+            DistanceLog log = new DistanceLog(DateTime.Now, x1, y1, x2, y2, result);
+            db.DistanceLogs.Add(log);
+            db.SaveChanges();
+            return result;
         }
 
         public List<double> Split(double amount, int number)

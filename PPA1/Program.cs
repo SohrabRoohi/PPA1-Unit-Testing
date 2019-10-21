@@ -1,5 +1,8 @@
-﻿using System;
+﻿using Model;
+using System;
 using System.Collections.Generic;
+using Microsoft.Owin.Hosting;
+using System.Net.Http;
 
 namespace PPA1
 {
@@ -59,6 +62,13 @@ namespace PPA1
             Console.WriteLine();
             while (true)
             {
+                LogContext db = new LogContext(Config.dockerConnectionString);
+                Console.WriteLine("Prior Calls:");
+                Console.WriteLine("Timestamp heightInFeet heightInInches weightInPounds Result");
+                foreach(BMILog log in db.BMILogs)
+                {
+                    Console.WriteLine("\"" + log.timestamp + "\" " + log.heightFeet + " " + log.heightInches + " " + log.weight + " " + log.result);
+                }
                 Console.WriteLine("Enter 3 numbers on each line in the form: \nheightInFeet (double) \nHeightInInches (double) \nWeightInPounds (double)");
                 double heightInFeet, heightInInches, weightInPounds;
                 try
@@ -72,7 +82,7 @@ namespace PPA1
                     continue;
                 }
                 Console.WriteLine();
-                Console.WriteLine(f.BMI(heightInFeet, heightInInches, weightInPounds));
+                Console.WriteLine(f.BMI(heightInFeet, heightInInches, weightInPounds,db));
                 Console.WriteLine();
                 break;
             }
@@ -109,6 +119,13 @@ namespace PPA1
             Console.WriteLine();
             while (true)
             {
+                LogContext db = new LogContext(Config.dockerConnectionString);
+                Console.WriteLine("Prior Calls:");
+                Console.WriteLine("Timestamp heightInFeet heightInInches weightInPounds Result");
+                foreach (DistanceLog log in db.DistanceLogs)
+                {
+                    Console.WriteLine("\"" + log.timestamp + "\" " + log.x1 + " " + log.y1 + " " + log.x2 + " " + log.y2 + " " + log.result);
+                }
                 Console.WriteLine("Enter 4 numbers on each line in the form: \nx1 (double) \ny1 (double) \nx2 (double) \ny2 (double)");
                 double x1, y1, x2, y2;
                 try
@@ -123,7 +140,7 @@ namespace PPA1
                     continue;
                 }
                 Console.WriteLine();
-                Console.WriteLine(f.Distance(x1, y1, x2, y2));
+                Console.WriteLine(f.Distance(x1, y1, x2, y2,db));
                 Console.WriteLine();
                 break;
             }
