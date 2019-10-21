@@ -20,10 +20,7 @@ namespace WebAPI.Controllers
         Functions f = new Functions();
         LogContext db;
 
-<<<<<<< HEAD
         [ActivatorUtilitiesConstructor]
-=======
->>>>>>> d64fa71a04e68f34f8e417d7c71963941734956f
         public BMIController()
         {
             db = new LogContext(Config.dockerConnectionString);
