@@ -13,11 +13,11 @@ Solution
 ```
 Based on the project structure I have created two seperate projects in Visual Studio, one to hold the CLI and functions and another to hold the tests.
 
-Program.cs - Contains all the CLI code, input/output, and calls the functions desired by the specifications. (This code was not expected to have code coverage as specified)
+[Program.cs](https://github.com/SohrabRoohi/PPA1-Unit-Testing/blob/master/PPA1/Program.cs) - Contains all the CLI code, input/output, and calls the functions desired by the specifications. (This code was not expected to have code coverage as specified)
 
-Functions.cs - Contains the four functions that were described in the assignment specifications. BMI, Retire, Distance, and Split.
+[Functions.cs](https://github.com/SohrabRoohi/PPA1-Unit-Testing/blob/master/PPA1/Functions.cs) - Contains the four functions that were described in the assignment specifications. BMI, Retire, Distance, and Split.
 
-UnitTest1.cs - Contains the four unit testing functions that test the functions implemented in Functions.cs. Uses Assert statements to analyze output of the functions.
+[UnitTest1.cs](https://github.com/SohrabRoohi/PPA1-Unit-Testing/blob/master/PPA1Tests/UnitTest1.cs) - Contains the four unit testing functions that test the functions implemented in Functions.cs. Uses Assert statements to analyze output of the functions.
 
 ### Naming
 Following C# conventions classes and functions are named in PascalCase. The unit tests are are also named in PascalCase and have a word in them to identify which function it is testing (e.g. BMITest() or RetireTest()).
@@ -25,6 +25,20 @@ Following C# conventions classes and functions are named in PascalCase. The unit
 ### Test Functionality
 
 The tests will use multiple assert statements to test the different cases of the specified functions. Invalid input (such as negative numbers) will be given and appropriate output should also match that.
+
+### Functions
+[public string BMI(double heightFeet, double heightInches, double weight)](https://github.com/SohrabRoohi/PPA1-Unit-Testing/blob/6c77b9333054a50f35092b9d86f9d2a4431bc591/PPA1/Functions.cs#L9)  
+Takes parameters indicated and will return a string in the format "BMIValue weightType" where BMIValue is a double rounded to two decimal places. If parameters given are invalid it will instead return "Impossible".
+
+[public string Retire(int age, double salary, double percentage, double goal)](https://github.com/SohrabRoohi/PPA1-Unit-Testing/blob/6c77b9333054a50f35092b9d86f9d2a4431bc591/PPA1/Functions.cs#L38)  
+Takes paramters indicated and returns a string based on age, if age is < 100 returns "age years old". If age >= 100 returns "age years old, you died!" If parameters given are invalid it will instead return "Impossible".
+
+[public double Distance(double x1, double y1, double x2, double y2)](https://github.com/SohrabRoohi/PPA1-Unit-Testing/blob/6c77b9333054a50f35092b9d86f9d2a4431bc591/PPA1/Functions.cs#L57)  
+Takes parameters indicated and returns the distance between (x1, 1) and (x2,y2) as a double rounded the two decimal places.
+
+[public List<double> Split(double amount, int number)](https://github.com/SohrabRoohi/PPA1-Unit-Testing/blob/6c77b9333054a50f35092b9d86f9d2a4431bc591/PPA1/Functions.cs#L62)  
+Takes paramters indicated and creates a List of double **L** of size **number** (parameter) which where the L[i] indicates how much the **i**th person in the group should pay. If the amount cannot be split equally the remainder **R** is equally distributed between the first **R** people. If parameters given are invalid it will return an empty List.
+
 
 # Setup
 
@@ -83,3 +97,6 @@ The methods in Functions.cs have 100% code coverage, Program.cs does not count b
 Author: Sohrab Roohi
 
 My experience with unit testing and test driven development was very insightful. I gained some more experience writing unit tests and it was my first time going with the "write the test first" approach. I think unit testing is a very important aspect to software development as it helps catch bugs from future changes. The idea of TDD is also very important because it makes you think of edge cases and expected values before the fact which helps you design your functions. It would definitely be useful for a real project especially when it is important that there be no mistakes in the code. However, on the other hand the only drawback I had when using TDD was that I had to think of the expected values of some of these functions before hand. Some of the functions had a lot of calculations and it was a little annoying to do it by hand to make sure it was correct. Other than that, I think unit testing and TDD are a very important aspect of software development.
+
+# Screencasts
+You can find the screencasts in the in the [Screencasts](https://github.com/SohrabRoohi/PPA1-Unit-Testing/tree/master/Screencasts) folder (RootFolder/Screencasts).
