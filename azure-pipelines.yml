@@ -29,18 +29,21 @@ steps:
     configuration: '$(buildConfiguration)'
 
 - task: DotNetCoreCLI@2
+  displayName: 'Unit Tests'
   inputs:
     command: 'test'
     projects: '**/PPA1Tests.csproj'
     arguments: '--configuration $(BuildConfiguration)'
 
 - task: DotNetCoreCLI@2
+  displayName: 'Stub/Mock Tests'
   inputs:
     command: 'test'
     projects: '**/PPA2TestDoublesTest.csproj'
     arguments: '--configuration $(BuildConfiguration)'
 
 - task: DotNetCoreCLI@2
+  displayName: 'API Tests'
   inputs:
     command: 'test'
     projects: '**/PPA2APITests.csproj'
