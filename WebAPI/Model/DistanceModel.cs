@@ -12,11 +12,14 @@ namespace WebAPI.Model
         public double x2 { get; set; }
         public double y2 { get; set; }
 
+<<<<<<< HEAD
         public DistanceModel()
         {
 
         }
 
+=======
+>>>>>>> d64fa71a04e68f34f8e417d7c71963941734956f
         public DistanceModel(double x1, double y1, double x2, double y2)
         {
             this.x1 = x1;

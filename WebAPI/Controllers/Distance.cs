@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+<<<<<<< HEAD
 using Microsoft.Extensions.DependencyInjection;
+=======
+>>>>>>> d64fa71a04e68f34f8e417d7c71963941734956f
 using Model;
 using PPA1;
 using WebAPI.Model;
@@ -17,7 +20,10 @@ namespace WebAPI.Controllers
         Functions f = new Functions();
         LogContext db;
 
+<<<<<<< HEAD
         [ActivatorUtilitiesConstructor]
+=======
+>>>>>>> d64fa71a04e68f34f8e417d7c71963941734956f
         public DistanceController()
         {
             db = new LogContext(Config.dockerConnectionString);
