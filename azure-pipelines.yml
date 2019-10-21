@@ -43,7 +43,7 @@ steps:
 - task: DotNetCoreCLI@2
   inputs:
     command: 'test'
-    projects: '**/PPA2APITest.csproj'
+    projects: '**/PPA2APITests.csproj'
     arguments: '--configuration $(BuildConfiguration)'
 
 
