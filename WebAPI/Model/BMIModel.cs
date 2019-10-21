@@ -11,6 +11,11 @@ namespace WebAPI.Model
         public double heightInInches { get; set; }
         public double weight { get; set; }
 
+        public BMIModel()
+        {
+
+        }
+
         public BMIModel(double heightInFeet, double heightInInches, double weight)
         {
             this.heightInFeet = heightInFeet;
