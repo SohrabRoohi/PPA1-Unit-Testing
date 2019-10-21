@@ -3,22 +3,29 @@ using PPA1;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Microsoft.EntityFrameworkCore;
+using Model;
+using Moq;
 
 namespace PPA1Tests
 {
+    
     [TestClass]
     public class UnitTest1
     {
         Functions f = new PPA1.Functions();
+        LogContext db = new LogContext(new DbContextOptionsBuilder<LogContext>()
+                .UseInMemoryDatabase(databaseName: "TestDB")
+                .Options);
 
         [TestMethod]
         public void BMITest()
         {
-            Assert.AreEqual("Impossible", f.BMI(0, 0, 0), "Expected height/weight to be impossible");
-            Assert.AreEqual("17.57 Underweight", f.BMI(5, 11, 123), "Expected user to be underweight");
-            Assert.AreEqual("21.39 Normal weight", f.BMI(6, 0, 154), "Expected user to be normal weight");
-            Assert.AreEqual("28.6 Overweight", f.BMI(5, 6, 173), "Expected user to be overweight");
-            Assert.AreEqual("41.37 Obese", f.BMI(4, 11, 200), "Expected user to be obese");
+            Assert.AreEqual("Impossible", f.BMI(0, 0, 0,db), "Expected height/weight to be impossible");
+            Assert.AreEqual("17.57 Underweight", f.BMI(5, 11, 123,db), "Expected user to be underweight");
+            Assert.AreEqual("21.39 Normal weight", f.BMI(6, 0, 154,db), "Expected user to be normal weight");
+            Assert.AreEqual("28.6 Overweight", f.BMI(5, 6, 173,db), "Expected user to be overweight");
+            Assert.AreEqual("41.37 Obese", f.BMI(4, 11, 200,db), "Expected user to be obese");
         }
 
         [TestMethod]
@@ -33,9 +40,9 @@ namespace PPA1Tests
         [TestMethod]
         public void DistanceTest()
         {
-            Assert.AreEqual(1.00, f.Distance(1, 0, 2, 0), "Incorrect distance given for straight line");
-            Assert.AreEqual(103.08, f.Distance(100, 5, 200, -20), "Incorrect distance given for negative values");
-            Assert.AreEqual(999051054.75, f.Distance(1e9, -1e5, 1e6, 1e7), "Incorrect distance given for large values");
+            Assert.AreEqual(1.00, f.Distance(1, 0, 2, 0,db), "Incorrect distance given for straight line");
+            Assert.AreEqual(103.08, f.Distance(100, 5, 200, -20,db), "Incorrect distance given for negative values");
+            Assert.AreEqual(999051054.75, f.Distance(1e9, -1e5, 1e6, 1e7,db), "Incorrect distance given for large values");
         }
 
         [TestMethod]
